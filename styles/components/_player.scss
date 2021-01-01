@@ -1,0 +1,54 @@
+.player {
+  min-height: 7vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: auto;
+
+  div {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    overflow: hidden;
+    div {
+      min-width: 100%;
+      min-height: 3px;
+      background-color: #adcaf2;
+      border-radius: 8px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+    }
+  }
+  input {
+    width: 100%;
+    max-height: 3px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    border-radius: 8px;
+    appearance: none;
+    outline: none;
+    background: #ff9966;
+    z-index: 0;
+    transition: width 0.2s ease;
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: #ff9966;
+      cursor: pointer;
+    }
+  }
+
+  span {
+    font-size: 0.8rem;
+  }
+}

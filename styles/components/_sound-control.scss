@@ -1,0 +1,32 @@
+.sound-control {
+  min-height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.2rem auto;
+  width: 60%;
+  input {
+    flex-grow: 1;
+    margin: 0 0.5rem;
+    max-height: 2px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #adcaf2;
+    border-radius: 8px;
+    outline: none;
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #adcaf2;
+      cursor: pointer;
+    }
+  }
+
+  i {
+    color: black;
+  }
+}

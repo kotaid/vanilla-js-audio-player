@@ -1,0 +1,579 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  color: #adcaf2;
+  font-family: "Open Sans", sans-serif;
+  background-color: #13171e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.app {
+  width: 400px;
+  padding: 0 1rem;
+  max-height: 100vh;
+  overflow: hidden;
+  background-color: #1a1f28;
+  position: relative;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff9966), to(#ff5e62));
+  background: linear-gradient(to bottom, #ff9966, #ff5e62);
+  border-radius: 20px;
+  border: transparent;
+}
+
+nav {
+  min-height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px;
+  font-size: 1.2rem;
+}
+
+nav span:last-child {
+  cursor: pointer;
+  padding: 0.3rem;
+  color: transparent;
+  background-image: -webkit-gradient(linear, left top, right top, from(#ff9966), to(#ff5e62));
+  background-image: linear-gradient(to right, #ff9966, #ff5e62);
+  -webkit-background-clip: text;
+  background-clip: text;
+  border-radius: 6px;
+  z-index: 100;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+nav span {
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+nav .library-opened-link {
+  border-color: #120f2e;
+}
+
+.song-info {
+  min-height: 58vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.song-info img {
+  width: 50%;
+  border-radius: 50%;
+}
+
+.song-info .playing {
+  -webkit-animation: playRotate 6s infinite forwards linear;
+          animation: playRotate 6s infinite forwards linear;
+}
+
+.song-info h2 {
+  color: transparent;
+  background-image: -webkit-gradient(linear, left top, right top, from(#ff9966), to(#ff5e62));
+  background-image: linear-gradient(to right, #ff9966, #ff5e62);
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-bottom: 0.2rem;
+}
+
+.song-info h2,
+.song-info h3 {
+  font-weight: 400;
+  text-align: center;
+}
+
+.song-info h3 {
+  font-size: 0.8rem;
+}
+
+@-webkit-keyframes playRotate {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+}
+
+@keyframes playRotate {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+}
+
+.player {
+  min-height: 7vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 90%;
+  margin: auto;
+}
+
+.player div {
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.player div div {
+  min-width: 100%;
+  min-height: 3px;
+  background-color: #adcaf2;
+  border-radius: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.player input {
+  width: 100%;
+  max-height: 3px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  border-radius: 8px;
+  -moz-appearance: none;
+       appearance: none;
+  outline: none;
+  background: #ff9966;
+  z-index: 0;
+  -webkit-transition: width 0.2s ease;
+  transition: width 0.2s ease;
+}
+
+.player input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #ff9966;
+  cursor: pointer;
+}
+
+.player span {
+  font-size: 0.8rem;
+}
+
+.player-control {
+  min-height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.player-control i {
+  cursor: pointer;
+  margin: 0 1.5rem;
+  font-size: 1.3rem;
+}
+
+.sound-control {
+  min-height: 15vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0.2rem auto;
+  width: 60%;
+}
+
+.sound-control input {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: 0 0.5rem;
+  max-height: 2px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  background: #adcaf2;
+  border-radius: 8px;
+  outline: none;
+}
+
+.sound-control input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #adcaf2;
+  cursor: pointer;
+}
+
+.sound-control i {
+  color: black;
+}
+
+.library {
+  max-height: 100vh;
+  min-height: 100vh;
+  width: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(300deg, #291f85, #3d3781, #444479);
+  overflow: auto;
+  opacity: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.library h2 {
+  margin: 1rem 0.5rem;
+}
+
+.library .add-song {
+  width: 100%;
+  min-height: 10vh;
+  text-align: center;
+  line-height: 10vh;
+  white-space: nowrap;
+  font-size: 1.5rem;
+  background-color: #231d5a;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.library .add-song:hover {
+  background-color: #120f2e;
+}
+
+.library-opened {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+@media screen and (max-width: 400px) {
+  .library {
+    width: 100vw;
+  }
+}
+
+.library-song {
+  width: 100%;
+  min-height: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.library-song img {
+  width: 30%;
+  margin-right: 0.8rem;
+}
+
+.library-song h4,
+.library-song h3 {
+  font-weight: 400;
+}
+
+.library-song h3 {
+  color: transparent;
+  background-image: -webkit-gradient(linear, left top, right top, from(#f8a57c), to(#f06d6f));
+  background-image: linear-gradient(to right, #f8a57c, #f06d6f);
+  -webkit-background-clip: text;
+}
+
+.library-song h4 {
+  font-size: 0.7rem;
+}
+
+.library-song:hover {
+  background-color: #231d5a;
+}
+
+.library-song > * {
+  pointer-events: none;
+}
+
+.selected {
+  background-color: #120f2e;
+}
+
+.connect-popup {
+  height: 100%;
+  width: 100%;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 1000;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.popup-section {
+  min-height: 50vh;
+  background-color: #13171ed5;
+  width: 85%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  border-radius: 10px;
+}
+
+.popup-section i {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  padding: 0.3rem 0.4rem;
+  border-radius: 50%;
+  border: 1px solid #adcaf2;
+}
+
+.popup-section h3 {
+  text-align: center;
+}
+
+.popup-section div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.popup-section form {
+  width: 90%;
+  -webkit-box-flex: 0.6;
+      -ms-flex-positive: 0.6;
+          flex-grow: 0.6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.popup-section form input,
+.popup-section form button {
+  border: none;
+  border-bottom: 1px solid #444479;
+  background: none;
+  color: #adcaf2;
+  outline: none;
+  padding: 0.4rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.popup-section form input:focus,
+.popup-section form button:focus {
+  border-bottom-color: #291f85;
+  background-color: #adcaf23f;
+}
+
+.popup-section form input div,
+.popup-section form button div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.popup-section form button {
+  border: 2px solid transparent;
+  color: transparent;
+  background-image: -webkit-gradient(linear, left top, right top, from(#ff9966), to(#ff5e62));
+  background-image: linear-gradient(to right, #ff9966, #ff5e62);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 1.2rem;
+  margin: 0.3rem;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -webkit-transition: none;
+  transition: none;
+}
+
+.popup-section form button:focus {
+  border: 2px solid #ff5e62;
+}
+
+.popup-section form a {
+  color: #adcaf2;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.popup-section form a:hover {
+  color: #291f85;
+}
+
+.login-form,
+.logout-form,
+.add-song-form,
+.alert-message {
+  display: none;
+}
+
+.logout-form,
+.alert-message {
+  min-height: 25vh;
+  width: 50%;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.logout-form form,
+.alert-message form {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.logout-form form button,
+.alert-message form button {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.add-song-form div:first-child input {
+  border: none;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  width: 60%;
+}
+/*# sourceMappingURL=style.css.map */

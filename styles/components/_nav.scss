@@ -1,0 +1,26 @@
+nav {
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 1.2rem;
+  span:last-child {
+    cursor: pointer;
+    padding: 0.3rem;
+    color: transparent;
+    background-image: linear-gradient(to right, #ff9966, #ff5e62);
+    -webkit-background-clip: text;
+    background-clip: text;
+    border-radius: 6px;
+    z-index: 100;
+    transition: all 0.1s ease;
+  }
+  span {
+    cursor: pointer;
+    border: 2px solid transparent;
+  }
+  .library-opened-link {
+    border-color: #120f2e;
+  }
+}

@@ -1,0 +1,44 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  color: #adcaf2;
+  font-family: "Open Sans", sans-serif;
+  background-color: #13171e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.app {
+  width: 400px;
+  padding: 0 1rem;
+  max-height: 100vh;
+  overflow: hidden;
+  background-color: #1a1f28;
+  position: relative;
+}
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #ff9966, #ff5e62);
+  border-radius: 20px;
+  border: transparent;
+}
+
+@import "./components/nav";
+@import "./components/song-info";
+@import "./components/player";
+@import "./components/player-control";
+@import "./components/sound-control";
+@import "./components/library";
+@import "./components/library-song";
+@import "./components/connect-popup";
