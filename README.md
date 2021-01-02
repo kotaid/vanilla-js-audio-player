@@ -4,4 +4,4 @@ Vanilla javascript version of the look-alike Dev Ed music player from his react 
 #Live App At:
 <a href="https://audio-player-1d670.web.app/">https://audio-player-1d670.web.app/</a>
 
-Next To-Do: Improve the Java-Script Code.
+To-Do: Improve the Java-Script Code.
