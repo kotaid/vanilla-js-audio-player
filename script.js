@@ -41,11 +41,11 @@ window.addEventListener("load", event => {
          color: "#c3538a"
       },
       {
-         img: "https://www.rafaelalucas.com/dailyui/9/covers/broods.jpg",
-         artistName: "Broods",
-         songName: "Bridges",
-         song: "https://www.rafaelalucas.com/dailyui/9/songs/song1.mp3",
-         color: "#a3b8b0"
+         img: "https://cdn.shopify.com/s/files/1/0090/0887/3587/files/2.png",
+         artistName: "Volume Four",
+         songName: "When The Sun Goes Down",
+         song: "https://cdn.shopify.com/s/files/1/0090/0887/3587/files/VOLUME_1_PART_4.mp3",
+         color: "#313c7c"
       },
       {
          img: "https://www.rafaelalucas.com/dailyui/9/covers/alice.jpg",
