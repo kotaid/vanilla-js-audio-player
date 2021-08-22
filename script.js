@@ -46,35 +46,6 @@ window.addEventListener("load", event => {
          songName: "When The Sun Goes Down",
          song: "https://cdn.shopify.com/s/files/1/0090/0887/3587/files/VOLUME_1_PART_4.mp3",
          color: "#313c7c"
-      },
-      {
-         img: "https://www.rafaelalucas.com/dailyui/9/covers/alice.jpg",
-         artistName: "Alice Phoebe Lou",
-         songName: "Orbit",
-         song: "https://www.rafaelalucas.com/dailyui/9/songs/song2.mp3",
-         color: "#38736d"
-      },
-      {
-         img: "https://www.rafaelalucas.com/dailyui/9/covers/feist.jpg",
-         artistName: "Feist",
-         songName: "The Bad in Each Other",
-         song: "https://www.rafaelalucas.com/dailyui/9/songs/song3.mp3",
-         color: "#a4b1b2"
-      },
-
-      {
-         img: "https://www.rafaelalucas.com/dailyui/9/covers/dagny.jpg",
-         artistName: "Dagny",
-         songName: "Ultraviolet",
-         song: "https://www.rafaelalucas.com/dailyui/9/songs/song1.mp3",
-         color: "#8098ce"
-      },
-      {
-         img: "https://www.rafaelalucas.com/dailyui/9/covers/sigrid.jpg",
-         artistName: "Sigrid",
-         songName: "Dynamite",
-         song: "https://www.rafaelalucas.com/dailyui/9/songs/song2.mp3",
-         color: "#1a91bd"
       }
    ];
 
@@ -82,20 +53,20 @@ window.addEventListener("load", event => {
    const groups = [
       {
          title: "Volume One",
-         img: "https://www.rafaelalucas.com/dailyui/9/covers/img06.jpg"
+         img: "https://cdn.shopify.com/s/files/1/0090/0887/3587/files/2.png"
       },
       {
          title: "Volume Two",
-         img: "https://www.rafaelalucas.com/dailyui/9/covers/img07.jpg"
+         img: "https://cdn.shopify.com/s/files/1/0090/0887/3587/files/1.png"
       },
       {
          title: "Volume Three",
          img:
-         "https://images.pexels.com/photos/761963/pexels-photo-761963.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=400"
+         "https://cdn.shopify.com/s/files/1/0090/0887/3587/files/3.png"
       },
       {
          title: "Volume Four",
-         img: "https://www.rafaelalucas.com/dailyui/9/covers/img10.jpg"
+         img: "https://cdn.shopify.com/s/files/1/0090/0887/3587/files/5.png"
       }
    ];
 
@@ -104,22 +75,22 @@ window.addEventListener("load", event => {
       {
          title: "The Silver Lining",
          img:
-         "https://images.pexels.com/photos/761963/pexels-photo-761963.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=400"
-      },
-      {
-         title: "Cloud Ten",
-         img:
-         "https://images.pexels.com/photos/3049327/pexels-photo-3049327.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=400"
+         "https://cdn.shopify.com/s/files/1/0090/0887/3587/files/2.png"
       },
       {
          title: "Air Born",
          img:
-         "https://images.pexels.com/photos/1661905/pexels-photo-1661905.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=400"
+         "https://cdn.shopify.com/s/files/1/0090/0887/3587/files/1.png"
+      },
+      {
+         title: "Cloud Ten",
+         img:
+         "https://cdn.shopify.com/s/files/1/0090/0887/3587/files/3.png"
       },
       {
          title: "When The Sun Goes Down",
          img:
-         "https://images.pexels.com/photos/216657/pexels-photo-216657.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=400"
+         "https://cdn.shopify.com/s/files/1/0090/0887/3587/files/5.png"
       }
    ];
 
