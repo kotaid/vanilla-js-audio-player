@@ -268,10 +268,10 @@
   box-sizing: border-box;
 }
 .wrapper .content .topContent .menuBar .appName {
-  font-weight: 600;
+  font-weight: normal;
   font-size: 16px;
   text-transform: uppercase;
-  font-family: "DanubeBold" !important;
+  font-family: 'DanubeBold', Barlow, sans-serif;
 }
 .wrapper .content .topContent .musicGroups {
   width: 100%;
