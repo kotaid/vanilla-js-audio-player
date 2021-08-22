@@ -1,222 +1,183 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/4074b6dd70.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="./styles/style.css" />
-    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-storage.js"></script>
-    <title>Audio Player</title>
-  </head>
-  <body>
-    <div class="app">
-      <div class="connect-popup">
-        <div class="alert-message popup-section">
-          <i class="fas fa-times"></i>
-          <div></div>
-        </div>
-        <div class="signup-form popup-section">
-          <i class="fas fa-times"></i>
-          <h3>Sign Up</h3>
-          <form action="">
-            <div>
-              <label for="">Email:</label>
-              <input type="email" id="signup-email" required />
-            </div>
-            <div>
-              <label for="signup-password">Password:</label>
-              <input type="password" id="signup-password" required />
-            </div>
-            <div>
-              <a href="#" id="login-link">or Log in</a>
-              <button type="submit">Sign up</button>
-            </div>
-          </form>
-        </div>
-        <div class="login-form popup-section">
-          <i class="fas fa-times"></i>
-          <h3>Log In</h3>
-          <form action="">
-            <div>
-              <label for="">Email:</label>
-              <input type="email" id="login-email" required />
-            </div>
-            <div>
-              <label for="signup-password">Password:</label>
-              <input type="password" id="login-password" required />
-            </div>
-            <div>
-              <a href="#" id="signup-link">or Sign up</a>
-              <button type="submit">Log in</button>
-            </div>
-          </form>
-        </div>
-        <div class="logout-form popup-section">
-          <i class="fas fa-times"></i>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - SKYBOX Discovery</title>
+  <link rel="stylesheet" href="./style.css">
 
-          <form action="">
-            <i class="fas fa-times"></i>
-            <button type="submit">Log out</button>
-          </form>
-        </div>
-        <div class="add-song-form popup-section">
-          <i class="fas fa-times"></i>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="credits">
+      <p>
+        Powered by
+        <a
+          target="_blank"
+          href="https://skybox.life/"
+          >SKYBOX</a
+        >
+      </p>
+    </div>
+    <div class="container">
+      <div class="screen-1">
+        <h1>
+          Here's your curated playlist,
+          <span>Miles.</span>
+        </h1>
 
-          <h3>Add Song To Your library:</h3>
-          <form action="">
-            <div>
-              <label for="add-song-btn">Choose File:</label>
-              <input
-                type="file"
-                id="add-song-input"
-                accept="audio/*"
-                required
-              />
-            </div>
-            <div>
-              <label for="add-song-name">Song Name:</label>
-              <input type="text" id="add-song-name" required />
-            </div>
-            <div>
-              <label for="add-song-artist">Artist Name:</label>
-              <input type="text" name="" id="add-song-artist" required />
-            </div>
-            <div>
-              <button>upload</button>
-            </div>
-          </form>
+        <div class="album-title">
+          <h2>featured</h2>
+          <h2>sort list</h2>
         </div>
-      </div>
-      <nav>
-        <span id="connect-link">Connect</span>
-        <span id="library-link">Library</span>
-      </nav>
-      <div class="song-info">
-        <img
-          src="https://chillhop.com/wp-content/uploads/2020/09/0255e8b8c74c90d4a27c594b3452b2daafae608d-1024x1024.jpg"
-          alt=""
-        />
-        <div>
-          <h2>Quran</h2>
-          <h3>Hakim Omari</h3>
+
+        <div class="albums">
+          <div class="albums-1">
+            <div class="left">
+              <p>Volume 1</p>
+              <h2>The Silver Lining</h2>
+            </div>
+
+            <div class="album-release">
+              <p>12,245 people are listening</p>
+            </div>
+
+            <div class="right">
+              <img src="https://i.imgur.com/ekfsCR4.png" alt="" />
+            </div>
+          </div>
+
+          <div class="album-row">
+            <div class="albums-2">
+              <div class="left">
+                <p>Neo-Soul</p>
+                <h2>Recovery</h2>
+              </div>
+
+              <img src="https://i.imgur.com/P1IKNt8.png" alt="" />
+            </div>
+
+            <div class="albums-3">
+              <div class="left">
+                <p>Katy Perry</p>
+                <h2>Prism</h2>
+              </div>
+
+              <img src="https://i.imgur.com/daXsUSP.png" alt="" />
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="player">
-        <div>
-          <input type="range" />
-          <div></div>
+
+        <div class="play-row">
+          <h3>12 Tracks</h3>
+          <div class="play-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+              <path d="M4 4l12 6-12 6z" />
+            </svg>
+          </div>
         </div>
-        <span>start</span>
-        <span>end</span>
+
+        <div class="album-desc">
+        <br />  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut culpa
+          quidem accusamus, tenetur eius deserunt provident dolores incidunt hic
+          iure repudiandae quae optio, nisi placeat expedita neque cupiditate!
+        
+        </div>
+
+        <div class="song song-1">
+          <p>1</p>
+          <h4>The Catalyst</h4>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+            <path
+              d="M10 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0-6a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+            />
+          </svg>
+        </div>
+        <div class="song song-2">
+          <p>2</p>
+          <h4>Waiting for the End</h4>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+            <path
+              d="M10 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0-6a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+            />
+          </svg>
+        </div>
+        <div class="song song-3">
+          <p>3</p>
+          <h4>Burning in the Skies</h4>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+            <path
+              d="M10 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0-6a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+            />
+          </svg>
+        </div>
+        <div class="song song-4">
+          <p>4</p>
+          <h4>Iridescent</h4>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+            <path
+              d="M10 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0-6a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+            />
+          </svg>
+        </div>
+        <div class="song song-5">
+          <p>5</p>
+          <h4>Blackout</h4>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+            <path
+              d="M10 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0-6a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+            />
+          </svg>
+        </div>
+        <div class="song song-6">
+          <p>6</p>
+          <h4>Wretches and Kings</h4>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+            <path
+              d="M10 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0-6a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+            />
+          </svg>
+        </div>
+        <div class="song song-7">
+          <p>7</p>
+          <h4>The Messenger</h4>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+            <path
+              d="M10 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0-6a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+            />
+          </svg>
+        </div>
+        <div class="song song-8">
+          <p>8</p>
+          <h4>Robot Boy</h4>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+            <path
+              d="M10 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0-6a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+            />
+          </svg>
+        </div>
+        <svg
+          class="back-button-2"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+        >
+          <polygon
+            points="3.828 9 9.899 2.929 8.485 1.515 0 10 .707 10.707 8.485 18.485 9.899 17.071 3.828 11 20 11 20 9 3.828 9"
+          />
+        </svg>
+
+        <svg
+          class="back-button"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+        >
+          <polygon
+            points="3.828 9 9.899 2.929 8.485 1.515 0 10 .707 10.707 8.485 18.485 9.899 17.071 3.828 11 20 11 20 9 3.828 9"
+          />
+        </svg>
       </div>
-      <div class="player-control">
-        <i class="fas fa-backward" id="backward"></i>
-        <i class="fas fa-play" id="play-pause"></i>
-        <i class="fas fa-forward" id="forward"></i>
-      </div>
-      <div class="sound-control">
-        <i class="fas fa-volume-down"></i>
-        <input type="range" max="100" step="1" />
-        <i class="fas fa-volume-up"></i>
-      </div>
-      <audio src="./songs/quran.mp3"></audio>
     </div>
-    <div class="library">
-      <h2>Library</h2>
-      <div class="library-song selected" id="0">
-        <img
-          src="https://chillhop.com/wp-content/uploads/2020/09/0255e8b8c74c90d4a27c594b3452b2daafae608d-1024x1024.jpg"
-          alt=""
-        />
-        <div class="library-song-info">
-          <h3>Song 1</h3>
-          <h4>Artist 1</h4>
-        </div>
-      </div>
-      <div class="library-song" id="1">
-        <img
-          src="https://chillhop.com/wp-content/uploads/2020/07/ef95e219a44869318b7806e9f0f794a1f9c451e4-1024x1024.jpg"
-          alt=""
-        />
-        <div class="library-song-info">
-          <h3>Song 2</h3>
-          <h4>Artist 2</h4>
-        </div>
-      </div>
-      <div class="library-song" id="2">
-        <img
-          src="https://chillhop.com/wp-content/uploads/2020/07/ff35dede32321a8aa0953809812941bcf8a6bd35-1024x1024.jpg"
-          alt=""
-        />
-        <div class="library-song-info">
-          <h3>Song 3</h3>
-          <h4>Artist 3</h4>
-        </div>
-      </div>
-      <div class="library-song" id="3">
-        <img
-          src="https://chillhop.com/wp-content/uploads/2020/07/ef95e219a44869318b7806e9f0f794a1f9c451e4-1024x1024.jpg"
-          alt=""
-        />
-        <div class="library-song-info">
-          <h3>Song 4</h3>
-          <h4>Artist 4</h4>
-        </div>
-      </div>
-      <div class="library-song" id="4">
-        <img
-          src="https://chillhop.com/wp-content/uploads/2020/07/ff35dede32321a8aa0953809812941bcf8a6bd35-1024x1024.jpg"
-          alt=""
-        />
-        <div class="library-song-info">
-          <h3>Song 5</h3>
-          <h4>Artist 5</h4>
-        </div>
-      </div>
-      <div class="library-song" id="5">
-        <img
-          src="https://chillhop.com/wp-content/uploads/2020/09/0255e8b8c74c90d4a27c594b3452b2daafae608d-1024x1024.jpg"
-          alt=""
-        />
-        <div class="library-song-info">
-          <h3>Song 6</h3>
-          <h4>Artist 6</h4>
-        </div>
-      </div>
-      <div class="add-song">Add Song <i class="far fa-plus-square"></i></div>
-    </div>
-    <script>
-      var firebaseConfig = {
-        apiKey: "AIzaSyDrlpoAxibJjGCUbYq8rfBNK7wcjQbzpLg",
-        authDomain: "audio-player-1d670.firebaseapp.com",
-        projectId: "audio-player-1d670",
-        storageBucket: "audio-player-1d670.appspot.com",
-        messagingSenderId: "897703865464",
-        appId: "1:897703865464:web:cdb889b090895c8aa9918d",
-        measurementId: "G-724R4XTJZW",
-        storageBucket: "gs://audio-player-1d670.appspot.com",
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-      const auth = firebase.auth();
-      const db = firebase.firestore();
-      const storage = firebase.storage();
-      const storageRef = storage.ref();
-    </script>
-    <script src="./scripts/songs.js"></script>
-    <script src="./scripts/app.js"></script>
-    <script src="./scripts/auth.js"></script>
-    <script src="./scripts/storage.js"></script>
-  </body>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js'></script><script  src="./script.js"></script>
+
+</body>
 </html>
