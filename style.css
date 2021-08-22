@@ -271,6 +271,7 @@
   font-weight: 600;
   font-size: 16px;
   text-transform: uppercase;
+  font-family: "DanubeBold" !important;
 }
 .wrapper .content .topContent .musicGroups {
   width: 100%;
@@ -798,4 +799,12 @@
 .swiper-button-prev,
 .swiper-button-next {
   all: unset;
+}
+
+
+@font-face {
+font-family: "DanubeBold";
+src: url("https://shop-home-base-records.myshopify.com/admin/themes/82466537587?key=assets%2FDANUBE.eot");
+src: url("https://shop-home-base-records.myshopify.com/admin/themes/82466537587?key=assets%2FDanubeBold.woff") format("woff"),
+url("https://shop-home-base-records.myshopify.com/admin/themes/82466537587?key=assets%2FDanubeBold.woff2") format("woff2");
 }
