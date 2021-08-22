@@ -8,7 +8,7 @@
 body {
   color: #adcaf2;
   font-family: "Open Sans", sans-serif;
-  background-color: #13171e;
+  background-color: #131313;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -26,7 +26,7 @@ body {
   padding: 0 1rem;
   max-height: 100vh;
   overflow: hidden;
-  background-color: #1a1f28;
+  background-color: #131313;
   position: relative;
 }
 
@@ -183,7 +183,7 @@ nav .library-opened-link {
 .player div div {
   min-width: 100%;
   min-height: 3px;
-  background-color: #adcaf2;
+  background-color: #131313;
   border-radius: 8px;
   position: absolute;
   top: 0;
