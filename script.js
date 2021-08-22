@@ -34,11 +34,11 @@ window.addEventListener("load", event => {
          color: "#067885"
       },
       {
-         img: "https://www.rafaelalucas.com/dailyui/9/covers/angele.jpg",
-         artistName: "Angèle",
-         songName: "La Loi de Murphy",
-         song: "https://www.rafaelalucas.com/dailyui/9/songs/song3.mp3",
-         color: "#74c2dd"
+         img: "https://cdn.shopify.com/s/files/1/0090/0887/3587/files/1.png",
+         artistName: "Volume Three",
+         songName: "Cloud Ten",
+         song: "https://cdn.shopify.com/s/files/1/0090/0887/3587/files/VOLUME-1-PART-3.MP3",
+         color: "#c3538a"
       },
       {
          img: "https://www.rafaelalucas.com/dailyui/9/covers/broods.jpg",
