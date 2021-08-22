@@ -746,7 +746,7 @@
   width: 150%;
   height: 150%;
   z-index: 2;
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(20px);
 }
 .wrapper .content .albumBg .bg img {
   width: 100%;
@@ -793,7 +793,7 @@
   height: 100%;
   position: fixed;
   z-index: -2;
-  transition: all 0.4s ease;
+  transition: all 0.2s ease;
 }
 
 .swiper-button-prev,
@@ -805,6 +805,6 @@
 @font-face {
 font-family: "DanubeBold";
 src: url("https://shop-home-base-records.myshopify.com/admin/themes/82466537587?key=assets%2FDANUBE.eot");
-src: url("https://shop-home-base-records.myshopify.com/admin/themes/82466537587?key=assets%2FDanubeBold.woff") format("woff"),
-url("https://shop-home-base-records.myshopify.com/admin/themes/82466537587?key=assets%2FDanubeBold.woff2") format("woff2");
+src: url("https://shop-home-base-records.myshopify.com/admin/themes/82466537587?key=assets%2FDanubeBold.woff") format("woff");
+src: url("https://shop-home-base-records.myshopify.com/admin/themes/82466537587?key=assets%2FDanubeBold.woff2") format("woff2");
 }
