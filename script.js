@@ -24,14 +24,14 @@ window.addEventListener("load", event => {
          artistName: "Volume One",
          songName: "The Silver Lining",
          song: "https://cdn.shopify.com/s/files/1/0090/0887/3587/files/VOLUME-1-PART-1.MP3",
-         color: "#f5c63d"
+         color: "#b1751e"
       },
       {
-         img: "https://www.rafaelalucas.com/dailyui/9/covers/ohland.jpg",
-         artistName: "Oh Land",
-         songName: "Postpone the Bad",
-         song: "https://www.rafaelalucas.com/dailyui/9/songs/song2.mp3",
-         color: "#afc5c3"
+         img: "https://cdn.shopify.com/s/files/1/0090/0887/3587/files/3.png",
+         artistName: "Volume Two",
+         songName: "Air Born",
+         song: "https://cdn.shopify.com/s/files/1/0090/0887/3587/files/VOLUME-1-PART-2.MP3",
+         color: "#067885"
       },
       {
          img: "https://www.rafaelalucas.com/dailyui/9/covers/angele.jpg",
