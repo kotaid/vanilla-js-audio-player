@@ -20,10 +20,10 @@ window.addEventListener("load", event => {
    // Songs
    const songs = [
       {
-         img: "https://www.rafaelalucas.com/dailyui/9/covers/jain.jpg",
-         artistName: "Jain",
-         songName: "Makeba",
-         song: "https://www.rafaelalucas.com/dailyui/9/songs/song1.mp3",
+         img: "https://cdn.shopify.com/s/files/1/0090/0887/3587/files/5.png",
+         artistName: "Volume One",
+         songName: "The Silver Lining",
+         song: "https://cdn.shopify.com/s/files/1/0090/0887/3587/files/VOLUME-1-PART-1.MP3",
          color: "#f5c63d"
       },
       {
