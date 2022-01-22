@@ -1,0 +1,810 @@
+@import url("https://fonts.googleapis.com/css?family=Barlow+Condensed:300,400,500,600,700,800,900|Barlow:300,400,500,600,700,800,900&display=swap");
+.about {
+  position: fixed;
+  z-index: 10;
+  bottom: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  transition: all 0.2s ease;
+}
+@media screen and (max-width: 640px) {
+  .about {
+    display: none;
+  }
+}
+.about .bg_links {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 100%;
+  backdrop-filter: blur(5px);
+  position: absolute;
+}
+.about .logo {
+  width: 40px;
+  height: 40px;
+  z-index: 9;
+  background-image: url(https://rafaelavlucas.github.io/assets/codepen/logo_white.svg);
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: 10px 7px;
+  opacity: 0.9;
+  transition: all 1s 0.2s ease;
+  bottom: 0;
+  right: 0;
+}
+.about .social {
+  opacity: 0;
+  right: 0;
+  bottom: 0;
+}
+.about .social .icon {
+  width: 100%;
+  height: 100%;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  display: flex;
+  transition: all 0.2s ease, background-color 0.4s ease;
+  opacity: 0;
+  border-radius: 100%;
+}
+.about .social.portfolio {
+  transition: all 0.8s ease;
+}
+.about .social.portfolio .icon {
+  background-image: url(https://rafaelavlucas.github.io/assets/codepen/link.svg);
+}
+.about .social.dribbble {
+  transition: all 0.3s ease;
+}
+.about .social.dribbble .icon {
+  background-image: url(https://rafaelavlucas.github.io/assets/codepen/dribbble.svg);
+}
+.about .social.linkedin {
+  transition: all 0.8s ease;
+}
+.about .social.linkedin .icon {
+  background-image: url(https://rafaelavlucas.github.io/assets/codepen/linkedin.svg);
+}
+.about:hover {
+  width: 105px;
+  height: 105px;
+  transition: all 0.6s cubic-bezier(0.64, 0.01, 0.07, 1.65);
+}
+.about:hover .logo {
+  opacity: 1;
+  transition: all 0.6s ease;
+}
+.about:hover .social {
+  opacity: 1;
+}
+.about:hover .social .icon {
+  opacity: 0.9;
+}
+.about:hover .social:hover {
+  background-size: 28px;
+}
+.about:hover .social:hover .icon {
+  background-size: 65%;
+  opacity: 1;
+}
+.about:hover .social.portfolio {
+  right: 0;
+  bottom: calc(100% - 40px);
+  transition: all 0.3s 0s cubic-bezier(0.64, 0.01, 0.07, 1.65);
+}
+.about:hover .social.portfolio .icon:hover {
+  background-color: #698fb7;
+}
+.about:hover .social.dribbble {
+  bottom: 45%;
+  right: 45%;
+  transition: all 0.3s 0.15s cubic-bezier(0.64, 0.01, 0.07, 1.65);
+}
+.about:hover .social.dribbble .icon:hover {
+  background-color: #ea4c89;
+}
+.about:hover .social.linkedin {
+  bottom: 0;
+  right: calc(100% - 40px);
+  transition: all 0.3s 0.25s cubic-bezier(0.64, 0.01, 0.07, 1.65);
+}
+.about:hover .social.linkedin .icon:hover {
+  background-color: #0077b5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 0;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  color: inherit;
+}
+*:focus {
+  outline: 0;
+}
+
+.wrapper {
+  display: grid;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: "Barlow", sans-serif;
+  user-select: none;
+  letter-spacing: 0.8px;
+}
+@media screen and (max-height: 600px) {
+  .wrapper {
+    height: 100% !important;
+    min-height: 600px;
+  }
+}
+.wrapper .content {
+  width: 375px;
+  height: 760px;
+  margin: 60px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  box-shadow: 0px 30px 80px rgba(0, 0, 0, 0.3);
+}
+@media screen and (max-width: 640px) {
+  .wrapper .content {
+    width: 100%;
+    height: 100%;
+    border-radius: 0px;
+    margin-bottom: 0px;
+    margin: 0px 0;
+  }
+}
+.wrapper .content .icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.wrapper .content .icon:before {
+  position: absolute;
+  content: "";
+  width: 24px;
+  height: 24px;
+  z-index: 1;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.wrapper .content .icon:active:before {
+  width: 28px;
+  height: 28px;
+}
+.wrapper .content .icon.shuffle:before {
+  background-image: url("https://www.rafaelalucas.com/dailyui/9/assets/shuffle.svg");
+  opacity: 0.5;
+}
+.wrapper .content .icon.prev:before {
+  background-image: url("https://www.rafaelalucas.com/dailyui/9/assets/prev.svg");
+}
+.wrapper .content .icon.play:before {
+  background-image: url("https://www.rafaelalucas.com/dailyui/9/assets/play.svg");
+}
+.wrapper .content .icon.next:before {
+  background-image: url("https://www.rafaelalucas.com/dailyui/9/assets/next.svg");
+}
+.wrapper .content .icon.repeat:before {
+  background-image: url("https://www.rafaelalucas.com/dailyui/9/assets/repeat.svg");
+  opacity: 0.5;
+}
+.wrapper .content .icon.bottomExpand {
+  background-image: url("https://www.rafaelalucas.com/dailyui/9/assets/arrow-down.svg");
+}
+.wrapper .content .icon.topExpand {
+  background-image: url("https://www.rafaelalucas.com/dailyui/9/assets/arrow-down.svg");
+}
+.wrapper .content .icon.menuHamburguer {
+  background-image: url("https://www.rafaelalucas.com/dailyui/9/assets/menu.svg");
+}
+.wrapper .content .icon.plus:before {
+  background-image: url("https://www.rafaelalucas.com/dailyui/9/assets/plus.svg");
+}
+.wrapper .content .icon.heart:before {
+  background-image: url("https://www.rafaelalucas.com/dailyui/9/assets/heart.svg");
+}
+.wrapper .content .icon.heart.fave:before {
+  animation: fave 0.3s ease;
+  background-image: url("https://www.rafaelalucas.com/dailyui/9/assets/fave.svg");
+}
+@keyframes fave {
+  50% {
+    width: 40px;
+    height: 40px;
+  }
+  100% {
+    width: 24px;
+    height: 24px;
+  }
+}
+.wrapper .content .icon.close:before {
+  background-image: url("https://www.rafaelalucas.com/dailyui/9/assets/close.svg");
+}
+.wrapper .content .topContent {
+  width: 100%;
+  max-height: 60px;
+  background-color: rgba(232, 232, 240, 0.5);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  box-sizing: border-box;
+  backdrop-filter: blur(5px);
+  transition: all 0.4s 0.2s ease;
+}
+.wrapper .content .topContent .menuBar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.wrapper .content .topContent .menuBar .appName {
+  font-weight: normal;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: 'DanubeBold', Barlow, sans-serif;
+}
+.wrapper .content .topContent .musicGroups {
+  width: 100%;
+  height: 80px;
+  margin-top: 25px;
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 0.4s ease;
+  visibility: hidden;
+  cursor: grab;
+}
+.wrapper .content .topContent .musicGroups:active {
+  cursor: grabbing;
+}
+.wrapper .content .topContent .musicGroups .swiper-slide {
+  width: 150px;
+  height: 80px;
+  margin-right: 20px;
+}
+.wrapper .content .topContent .musicGroups .swiper-slide:first-child {
+  margin-left: 20px;
+}
+.wrapper .content .topContent .musicGroups .group {
+  position: relative;
+  border-radius: 4px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.wrapper .content .topContent .musicGroups .group:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 30px;
+  bottom: 0;
+  z-index: 2;
+}
+.wrapper .content .topContent .musicGroups .group figure {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+.wrapper .content .topContent .musicGroups .group figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(0.2);
+}
+.wrapper .content .topContent .musicGroups .group figure:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, #252525 10%, transparent 100%);
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+  z-index: 1;
+}
+.wrapper .content .topContent .musicGroups .group .titleGroup {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 3;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.wrapper .content .topContent.expand {
+  max-height: 190px;
+  transition: all 0.4s ease;
+}
+.wrapper .content .topContent.expand .topExpand {
+  transform: rotate(180deg);
+}
+.wrapper .content .topContent.expand .musicGroups {
+  opacity: 1;
+  transform: translateX(0px);
+  transition: all 0.4s 0.2s ease;
+  height: 100%;
+  visibility: visible;
+}
+.wrapper .content .middleContent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.wrapper .content .middleContent .albumContent {
+  margin: 40px 0 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.wrapper .content .middleContent .albumContent.small {
+  width: 200px;
+}
+.wrapper .content .middleContent .albumContent.small .albumCover {
+  width: 200px;
+  height: 200px;
+  transition: all 0.4s ease;
+}
+@media screen and (max-height: 600px) {
+  .wrapper .content .middleContent .albumContent {
+    width: 200px;
+  }
+  .wrapper .content .middleContent .albumContent .albumCover {
+    width: 200px;
+    height: 200px;
+    transition: all 0.4s ease;
+  }
+}
+.wrapper .content .middleContent .albumCover {
+  width: 280px;
+  height: 280px;
+  overflow: hidden;
+  box-shadow: 0px 30px 40px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  position: relative;
+  transition: all 0.4s 0.2s ease;
+  z-index: -1;
+}
+.wrapper .content .middleContent .albumCover:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.8) -20%, transparent 50%);
+}
+.wrapper .content .middleContent .albumCover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.wrapper .content .middleContent .artistName,
+.wrapper .content .middleContent .songName {
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  z-index: 2;
+}
+.wrapper .content .middleContent .artistName {
+  text-transform: uppercase;
+  margin: 30px 0 10px 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+.wrapper .content .middleContent .settings {
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px 0 20px;
+  box-sizing: border-box;
+  position: fixed;
+  transition: all 0s ease;
+  transform: translateY(-100px);
+  opacity: 0;
+}
+.wrapper .content .middleContent .playlistsContent {
+  background-color: rgba(232, 232, 240, 0.6);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0 40px 0;
+  box-sizing: border-box;
+  backdrop-filter: blur(10px);
+  transform: translateY(calc(-100% - 60px));
+  transition: all 0.8s cubic-bezier(0.8, -0.02, 0.25, 1);
+}
+.wrapper .content .middleContent .playlistsContent .close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.wrapper .content .middleContent .playlistsContent .playlist {
+  width: calc(100% - 40px);
+  height: 100px;
+  min-height: 60px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  align-items: center;
+  margin-bottom: 10px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 8px;
+  z-index: 3;
+  transition: all 0.2s ease;
+  border: 0px solid white;
+  cursor: pointer;
+  opacity: 0.8;
+}
+.wrapper .content .middleContent .playlistsContent .playlist:last-child {
+  margin-bottom: 0;
+}
+.wrapper .content .middleContent .playlistsContent .playlist .checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: 2;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border-radius: 4px;
+}
+.wrapper .content .middleContent .playlistsContent .playlist .checkbox:before {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 0%;
+  z-index: 1;
+  background-size: contain;
+  background-image: url("https://www.rafaelalucas.com/dailyui/9/assets/check.svg");
+  opacity: 0;
+  transition: all 0.2s cubic-bezier(0.6, 0.02, 0.18, 1.25);
+}
+.wrapper .content .middleContent .playlistsContent .playlist .playlistThumb {
+  width: 80px;
+  height: calc(100% - 20px);
+  border-radius: 4px;
+  overflow: hidden;
+  z-index: 1;
+  margin-left: 10px;
+}
+.wrapper .content .middleContent .playlistsContent .playlist .playlistThumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.wrapper .content .middleContent .playlistsContent .playlist .playlistBg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #5a5a5a;
+}
+.wrapper .content .middleContent .playlistsContent .playlist .playlistBg img {
+  width: 120%;
+  height: 160%;
+  object-fit: cover;
+  filter: blur(10px) grayscale(1);
+  opacity: 0.8;
+}
+.wrapper .content .middleContent .playlistsContent .playlist .playlistBg:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: linear-gradient(145deg, rgba(0, 0, 0, 0.8) -20%, transparent 50%);
+}
+.wrapper .content .middleContent .playlistsContent .playlist .playlistTitle {
+  z-index: 1;
+  margin-left: 20px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 800;
+  color: white;
+}
+.wrapper .content .middleContent .playlistsContent .playlist.selected {
+  transition: all 0.2s ease;
+  opacity: 1;
+}
+.wrapper .content .middleContent .playlistsContent .playlist.selected .checkbox:before {
+  width: 20px;
+  height: 20px;
+  opacity: 1;
+}
+.wrapper .content .middleContent .playlistsContent .playlist.selected .playlistBg img {
+  filter: blur(8px) grayscale(0);
+}
+.wrapper .content .middleContent .swiper-container {
+  height: 100%;
+}
+.wrapper .content .middleContent .swiper-slide {
+  width: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .content .middleContent .swiper-slide.open {
+  transform: translateY(0);
+}
+.wrapper .content .middleContent .swiper-slide-active .settings {
+  transition: all 0.4s 0.4s ease;
+  opacity: 1;
+  transform: translateY(0px);
+}
+.wrapper .content .middleContent .swiper-slide-active.open .playlistsContent {
+  transform: translateY(0);
+}
+.wrapper .content .bottomContent {
+  width: 100%;
+  min-height: 100px;
+  max-height: 100px;
+  background-color: rgba(232, 232, 240, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  backdrop-filter: blur(5px);
+  transition: all 0.4s 0.2s ease;
+  padding: 5px 30px 20px 30px;
+  box-sizing: border-box;
+}
+.wrapper .content .bottomContent .bottomExpand {
+  transform: rotate(-180deg);
+  opacity: 0.6;
+}
+.wrapper .content .bottomContent .progressBar {
+  width: 100%;
+  visibility: hidden;
+  height: 0;
+  opacity: 0;
+  transition: all 0.4s ease;
+  transform: translateY(-60px);
+}
+@media screen and (max-width: 640px) {
+  .wrapper .content .bottomContent .progressBar {
+    box-sizing: border-box;
+  }
+}
+.wrapper .content .bottomContent .progressBar .timer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.wrapper .content .bottomContent .progressBar .barTimer {
+  width: 100%;
+  height: 5px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+  position: relative;
+}
+.wrapper .content .bottomContent .progressBar .barTimer .progress {
+  position: absolute;
+  background-color: white;
+  height: 100%;
+  width: 0%;
+  border-radius: 4px;
+  transition: all 0.4s ease;
+}
+.wrapper .content .bottomContent .player {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s 0.2s ease;
+}
+.wrapper .content .bottomContent .player .btnPlay {
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.1s ease;
+}
+.wrapper .content .bottomContent .player .btnPlay.pause {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.wrapper .content .bottomContent .player .btnPlay.pause .play:before {
+  background-image: url("https://www.rafaelalucas.com/dailyui/9/assets/pause.svg");
+}
+.wrapper .content .bottomContent.expand {
+  transition: all 0.2s ease;
+  min-height: 200px;
+  max-height: 200px;
+  padding: 10px 30px 20px 30px;
+}
+.wrapper .content .bottomContent.expand .bottomExpand {
+  transform: rotate(0deg);
+  opacity: 1;
+}
+.wrapper .content .bottomContent.expand .progressBar {
+  opacity: 1;
+  visibility: visible;
+  height: 50px;
+  transition: all 0.4s 0.2s ease;
+  transform: translateY(-10px);
+}
+.wrapper .content .bottomContent.expand .player .btnPlay {
+  width: 60px;
+  height: 60px;
+}
+.wrapper .content .bottomContent.expand .player .btnPlay .icon:before {
+  width: 32px;
+  height: 32px;
+}
+.wrapper .content .bottomContent.expand .player .btnPlay .icon:active:before {
+  width: 38px;
+  height: 38px;
+}
+.wrapper .content .albumBg {
+  position: absolute;
+  width: 100%;
+  max-height: 760px;
+  height: 100%;
+  top: 0;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+@media screen and (max-width: 640px) {
+  .wrapper .content .albumBg {
+    max-height: 100vh;
+  }
+}
+@media screen and (max-height: 600px) {
+  .wrapper .content .albumBg {
+    max-height: 100%;
+    height: 100%;
+    min-height: 600px;
+  }
+}
+.wrapper .content .albumBg:before, .wrapper .content .albumBg:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) -50%, transparent 60%);
+  z-index: 1;
+}
+.wrapper .content .albumBg:after {
+  top: initial;
+  bottom: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) -70%, transparent 60%);
+}
+.wrapper .content .albumBg .bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .content .albumBg .bg:before {
+  position: absolute;
+  content: "";
+  width: 150%;
+  height: 150%;
+  z-index: 2;
+  backdrop-filter: blur(20px);
+}
+.wrapper .content .albumBg .bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.wrapper .content .albumBg.animeBg .bg {
+  animation: animeBg 0.4s ease-in-out both;
+}
+@keyframes animeBg {
+  0% {
+    width: 100%;
+    height: 100%;
+  }
+  50% {
+    width: 130%;
+    height: 130%;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+  }
+}
+.wrapper .content .albumBg.animeBg .bg:before {
+  animation: animeBg2 0.6s ease-in-out both;
+}
+@keyframes animeBg2 {
+  0% {
+    width: 150%;
+    height: 150%;
+    backdrop-filter: blur(10px);
+  }
+  50% {
+    backdrop-filter: blur(40px);
+  }
+  100% {
+    width: 150%;
+    height: 150%;
+    backdrop-filter: blur(10px);
+  }
+}
+.wrapper .bodyBg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -2;
+  transition: all 0.2s ease;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  all: unset;
+}
+
+
+@font-face {
+font-family: "DanubeBold";
+src: url("https://shop-home-base-records.myshopify.com/admin/themes/82466537587?key=assets%2FDANUBE.eot");
+src: url("https://shop-home-base-records.myshopify.com/admin/themes/82466537587?key=assets%2FDanubeBold.woff") format("woff");
+src: url("https://shop-home-base-records.myshopify.com/admin/themes/82466537587?key=assets%2FDanubeBold.woff2") format("woff2");
+}
