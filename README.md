@@ -15,15 +15,9 @@ A custom Full Stack, Vanilla Javascript Music Player.
 
 
 ## Demo
-https://twitter.com/kotaid1/status/1345291815579217922/video/1
+https://user-images.githubusercontent.com/71237415/219974397-75055d32-e935-4ecb-aa9f-c17b536d5b90.mp4
 
-
-
-
-
-
-
-**Live App here:** https://audio-player-1d670.web.app/">https://audio-player-1d670.web.app
+**Live App here:** https://audio-player-1d670.web.app
 
 ## Tech Stack
 
